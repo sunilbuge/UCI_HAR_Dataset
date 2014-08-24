@@ -21,3 +21,10 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
     Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 Good luck!
+
+# Create functions provided under run_analysis.R and then execute below commands on console window
+# I had kept downloaded data set in folder UCI HAR Dataset under working directory 
+
+merged_data_set <- merge_data_set("UCI HAR Dataset")
+extracted_mean_std_data_set <- extract_mean_std(merged_data_set, "UCI HAR Dataset")
+melt_data_and_create_tidy_set(extracted_mean_std_data_set, "./tidyset.txt")
